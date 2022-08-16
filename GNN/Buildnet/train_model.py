@@ -52,6 +52,7 @@ class train_model():
         self.enc_mlp_channels = []
         self.dec_mlp_channels = []
 
+        # 1+log10(max(label_freq)/curr_label_freq)
         lossweights = np.array([1+np.log10(1.0), 1+np.log10(9.3881), 1+np.log10(73.6198), 1+np.log10(2.0929), 1+np.log10(20.0007), 1+np.log10(52.7757), \
                    1+np.log10(15.2698), 1+np.log10(103.0988), 1+np.log10(3.4394), 1+np.log10(35.3573), 1+np.log10(78.6826), 1+np.log10(64.8203), \
                    1+np.log10(129.6508), 1+np.log10(7.1101), 1+np.log10(108.0506), 1+np.log10(17.0152), 1+np.log10(29.8406), 1+np.log10(30.1860), \
